@@ -1,4 +1,3 @@
-
 public class FooBar {
 
 	public static void main(String[] args) {
@@ -10,12 +9,10 @@ public class FooBar {
 		System.out.println("Your bmi is " + Math.round(bmiCalculator(200, 72)) + ".");
 		smart();
 	
-		
-		
 	}
 	
 	public static double receipt(double subtotal, double tipPercent) {
-		double tax = subtotal * 0.8;
+		double tax = subtotal * 0.08;
 		double tip = subtotal * tipPercent;
 		double total = subtotal + tax + tip;
 		return total;
@@ -33,7 +30,7 @@ public class FooBar {
 	}
 	
 	public static void smart() {
-		for (int i = 1; i <= 4; i++) {
+		for (int i = 0; i < 4; i++) {
 			System.out.println("I am so smart.");
 		}
 		
@@ -42,5 +39,4 @@ public class FooBar {
 			System.out.println("/    \\");
 		}
 	}
-
 }
