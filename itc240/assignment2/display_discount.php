@@ -12,13 +12,20 @@ $discount_price = $list_price - $discount;
 $sales_tax_rate = 8;
 $sales_tax_amount = $discount_price * $sales_tax_rate * 0.01;
 
+//calculate total amount due
+$total_amount = $discount_price + $sales_tax_amount;
+
 //apply currency formatting and pecent format
 $list_price_f = "$" . number_format($list_price, 2);
+
 $discount_percent_f = $discount_percent . "%";
 $discount_f = "$" . number_format($discount, 2);
 $discount_price_f = "$" . number_format($discount_price, 2);
+
 $sales_tax_rate_f = $sales_tax_rate . "%";
 $sales_tax_amount_f = "$" . number_format($sales_tax_amount, 2);
+
+$total_amount_f = "$" . number_format($total_amount, 2);
 ?>
 
 
@@ -44,13 +51,19 @@ $sales_tax_amount_f = "$" . number_format($sales_tax_amount, 2);
             <span><?php echo htmlspecialchars($discount_f); ?></span>
             <br>
             <label>Discount Price:</label>
-            <span><?php echo $discount_price; ?></span>
+            <span><?php echo $discount_price_f; ?></span>
+            <br>
             <br>
             <label>Sales Tax Rate:</label>
             <span><?php echo $sales_tax_rate_f; ?></span>
             <br>
             <label>Sales Tax Amount:</label>
-            <span><?php echo $sales_tax_amount_f?></span>
+            <span><?php echo $sales_tax_amount_f ?></span>
+            <br>
+            <br>
+            <label>Total Amount:</label>
+            <span><?php echo $total_amount_f; ?></span>
+            <div>
         </main> 
     </body>
 </html>
