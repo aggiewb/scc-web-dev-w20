@@ -33,6 +33,7 @@ label {
 }
 
 #buttons input {
+    float: left;
     margin-bottom: .5em;
 }
 
