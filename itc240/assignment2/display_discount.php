@@ -8,12 +8,19 @@ $discount_percent = filter_input(INPUT_POST, 'discount_percent');
 $discount = $list_price * $discount_percent * 0.01;
 $discount_price = $list_price - $discount;
 
+//calculate the sales tax amount
+$sales_tax_rate = 8;
+$sales_tax_amount = $discount_price * $sales_tax_rate * 0.01;
+
 //apply currency formatting and pecent format
 $list_price_f = "$" . number_format($list_price, 2);
 $discount_percent_f = $discount_percent . "%";
 $discount_f = "$" . number_format($discount, 2);
 $discount_price_f = "$" . number_format($discount_price, 2);
+$sales_tax_rate_f = $sales_tax_rate . "%";
+$sales_tax_amount_f = "$" . number_format($sales_tax_amount, 2);
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -39,10 +46,10 @@ $discount_price_f = "$" . number_format($discount_price, 2);
             <label>Discount Price</label>
             <span><?php echo $discount_price; ?></span>
             <label>Sales Tax Rate</label>
-            <span><?php echo?></span>
+            <span><?php echo $sales_tax_rate_f; ?></span>
             <br>
             <label>Sales Tax Amount</label>
-            <span><?php echo ?></span>
+            <span><?php echo $sales_tax_amount_f?></span>
         </main> 
     </body>
 </html>
