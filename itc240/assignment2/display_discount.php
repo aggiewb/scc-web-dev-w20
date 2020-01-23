@@ -9,8 +9,8 @@ $discount = $list_price * $discount_percent * 0.01;
 $discount_price = $list_price - $discount;
 
 //calculate the sales tax amount
-$sales_tax_rate = 8;
-$sales_tax_amount = $discount_price * $sales_tax_rate * 0.01;
+define("SALES_TAX_RATE", 8);
+$sales_tax_amount = $discount_price * SALES_TAX_RATE * 0.01;
 
 //calculate total amount due
 $total_amount = $discount_price + $sales_tax_amount;
@@ -22,7 +22,7 @@ $discount_percent_f = $discount_percent . "%";
 $discount_f = "$" . number_format($discount, 2);
 $discount_price_f = "$" . number_format($discount_price, 2);
 
-$sales_tax_rate_f = $sales_tax_rate . "%";
+$sales_tax_rate_f = SALES_TAX_RATE . "%";
 $sales_tax_amount_f = "$" . number_format($sales_tax_amount, 2);
 
 $total_amount_f = "$" . number_format($total_amount, 2);
