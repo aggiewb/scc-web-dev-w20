@@ -38,6 +38,11 @@ $discount_price_f = "$" . number_format($discount_price, 2);
             <br>
             <label>Discount Price</label>
             <span><?php echo $discount_price; ?></span>
+            <label>Sales Tax Rate</label>
+            <span><?php echo?></span>
+            <br>
+            <label>Sales Tax Amount</label>
+            <span><?php echo ?></span>
         </main> 
     </body>
 </html>
