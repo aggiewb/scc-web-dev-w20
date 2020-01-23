@@ -30,25 +30,26 @@ $sales_tax_amount_f = "$" . number_format($sales_tax_amount, 2);
     </head>
     <body>
         <main>
-            <h1>Product Discount Calculator</h1>
+            <h1>Product Discount Calculator:</h1>
             <label>Product Description</label>
             <span><?php echo htmlspecialchars($product_description); ?></span>
             <br>
-            <label>List Price</label>
+            <label>List Price:</label>
             <span><?php echo htmlspecialchars($list_price_f); ?></span>
             <br>
-            <label>Standard Discount</label>
+            <label>Standard Discount:</label>
             <span><?php echo htmlspecialchars($discount_percent_f); ?></span>
             <br>
-            <label>Discount Amount</label>
+            <label>Discount Amount:</label>
             <span><?php echo htmlspecialchars($discount_f); ?></span>
             <br>
-            <label>Discount Price</label>
+            <label>Discount Price:</label>
             <span><?php echo $discount_price; ?></span>
-            <label>Sales Tax Rate</label>
+            <br>
+            <label>Sales Tax Rate:</label>
             <span><?php echo $sales_tax_rate_f; ?></span>
             <br>
-            <label>Sales Tax Amount</label>
+            <label>Sales Tax Amount:</label>
             <span><?php echo $sales_tax_amount_f?></span>
         </main> 
     </body>
