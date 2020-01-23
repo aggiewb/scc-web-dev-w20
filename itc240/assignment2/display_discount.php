@@ -30,8 +30,8 @@ $sales_tax_amount_f = "$" . number_format($sales_tax_amount, 2);
     </head>
     <body>
         <main>
-            <h1>Product Discount Calculator:</h1>
-            <label>Product Description</label>
+            <h1>Product Discount Calculator</h1>
+            <label>Product Description:</label>
             <span><?php echo htmlspecialchars($product_description); ?></span>
             <br>
             <label>List Price:</label>
