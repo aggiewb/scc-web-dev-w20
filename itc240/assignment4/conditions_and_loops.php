@@ -22,10 +22,10 @@ $total_cost_f = number_format($total_cost, 2);
         <p>This is for a three part assignment to test my knowledge of conditions and loops.</p>
         <h2>Total Meal Cost:</h2>
         <ul>
-            <li>Meal cost: <php? $meal_cost_f ?></li>
-            <li>Tip: <?php $tip_amount_f ?></li>
-            <li>Tax: <?php $tax_amount_f ?></li>
-            <li>Total: <?php $total_cost_f ?></li>
+            <li>Meal cost: <?php echo $meal_cost_f ?></li>
+            <li>Tip: <?php echo $tip_amount_f ?></li>
+            <li>Tax: <?php echo $tax_amount_f ?></li>
+            <li>Total: <?php echo $total_cost_f ?></li>
         </ul>
         <h2>How pricey is this meal?!</h2>
         <p><?php //desicion tree for meal price
