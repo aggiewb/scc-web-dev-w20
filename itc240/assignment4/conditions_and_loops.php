@@ -8,10 +8,10 @@ $tax_amount = $meal_cost * $tax_percent;
 $total_cost = $meal_cost + $tax_amount + $tip_amount;
 
 //meal cost section formatted variables
-$meal_cost_f = number_format($meal_cost, 2);
-$tip_amount_f = number_format($tip_amount, 2);
-$tax_amount_f = number_format($tax_amount, 2);
-$total_cost_f = number_format($total_cost, 2);
+$meal_cost_f = '$' . number_format($meal_cost, 2);
+$tip_amount_f = '$' . number_format($tip_amount, 2);
+$tax_amount_f = '$' . number_format($tax_amount, 2);
+$total_cost_f = '$' . number_format($total_cost, 2);
 
 ?>
 
