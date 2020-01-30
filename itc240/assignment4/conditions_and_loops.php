@@ -13,16 +13,6 @@ $tip_amount_f = number_format($tip_amount, 2);
 $tax_amount_f = number_format($tax_amount, 2);
 $total_cost_f = number_format($total_cost, 2);
 
-//desicion tree for meal price
-if($total_cost < 20){
-    echo 'Bargain price.';
-} elseif($total_cost > 20 || $total_cost < 40){
-    echo 'Moderate price.';
-} elseif($total_cost > 40) {
-    echo 'That is a pricey meal!';
-} else {
-    echo 'Have you entered a valid number?';
-}
 
 //for loop for free meal
 $random_number = rand(5, 7);
@@ -47,6 +37,18 @@ for($counter = 0; $counter < 11; $counter++){
             <li>Total: <?php $total_cost_f ?></li>
         </ul>
         <h2>How pricey is this meal?!</h2>
+        <p><?php
+        //desicion tree for meal price
+        if($total_cost < 20){
+            echo 'Bargain price.';
+        } elseif($total_cost > 20 || $total_cost < 40){
+            echo 'Moderate price.';
+        } elseif($total_cost > 40) {
+            echo 'That is a pricey meal!';
+        } else {
+            echo 'Have you entered a valid number?';
+        }
+        ?></p>
         <h2>Random Drawing for a Free Meal!</h2>
     </body>
 </html>
