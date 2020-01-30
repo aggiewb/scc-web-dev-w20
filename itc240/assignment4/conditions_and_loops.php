@@ -38,7 +38,14 @@ for($counter = 0; $counter < 11; $counter++){
     <head></head>
     <body>
         <h1>Assignment 3</h1>
+        <p>This is for a three part assignment to test my knowledge of conditions and loops.</p>
         <h2>Total Meal Cost:</h2>
+        <ul>
+            <li>Meal cost: <php? $meal_cost_f ?></li>
+            <li>Tip: <?php $tip_amount_f ?></li>
+            <li>Tax: <?php $tax_amount_f ?></li>
+            <li>Total: <?php $total_cost_f ?></li>
+        </ul>
         <h2>How pricey is this meal?!</h2>
         <h2>Random Drawing for a Free Meal!</h2>
     </body>
