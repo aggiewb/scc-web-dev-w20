@@ -16,7 +16,9 @@ $total_cost_f = '$' . number_format($total_cost, 2);
 ?>
 
 <html>
-    <head></head>
+    <head>
+        <title>Conditions and Loops</title>
+    </head>
     <body>
         <h1>Assignment 3</h1>
         <p>This is for a three part assignment to test my knowledge of conditions and loops.</p>
