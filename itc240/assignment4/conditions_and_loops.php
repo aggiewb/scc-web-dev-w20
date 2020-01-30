@@ -44,7 +44,7 @@ $total_cost_f = '$' . number_format($total_cost, 2);
         }
         ?></p>
         <h2>Random Drawing for a Free Meal!</h2>
-        <p>If your random number is in 5, 6, or 7, you can come in for a free meal!</p>
+        <p>If your random number is 5, 6, or 7, you can come in for a free meal!</p>
         <p><?php //for loop for free meal
         $random_number = rand(5, 7);
         for($counter = 0; $counter < 11; $counter++){
