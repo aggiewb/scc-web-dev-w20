@@ -19,8 +19,9 @@ $random_number = rand(5, 7);
 for($counter = 0; $counter < 11; $counter++){
     echo $counter;
     if($counter == $random_number){
-        echo 'is your random number';
+        echo ' is your random number';
     }
+    echo nl2br("\n");
 }
 ?>
 
