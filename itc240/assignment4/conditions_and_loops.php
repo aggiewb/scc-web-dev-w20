@@ -23,4 +23,13 @@ if($total_cost < 20){
 } else {
     echo 'Have you entered a valid number?';
 }
+
+//for loop for free meal
+$random_number = rand(5, 7);
+for($counter = 0, $count < 11; $counter++){
+    echo $counter;
+    if($counter = $random_number){
+        echo 'is your random number';
+    }
+}
 ?>
