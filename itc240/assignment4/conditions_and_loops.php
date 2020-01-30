@@ -19,6 +19,7 @@ $total_cost_f = '$' . number_format($total_cost, 2);
     <head>
         <title>Conditions and Loops</title>
         <link rel="stylesheet" type="text/css" href="conditions_and_loops_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <h1>Assignment 3</h1>
