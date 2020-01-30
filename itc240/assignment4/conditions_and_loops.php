@@ -13,16 +13,6 @@ $tip_amount_f = number_format($tip_amount, 2);
 $tax_amount_f = number_format($tax_amount, 2);
 $total_cost_f = number_format($total_cost, 2);
 
-
-//for loop for free meal
-$random_number = rand(5, 7);
-for($counter = 0; $counter < 11; $counter++){
-    echo $counter;
-    if($counter == $random_number){
-        echo ' is your random number';
-    }
-    echo nl2br("\n");
-}
 ?>
 
 <html>
@@ -38,8 +28,7 @@ for($counter = 0; $counter < 11; $counter++){
             <li>Total: <?php $total_cost_f ?></li>
         </ul>
         <h2>How pricey is this meal?!</h2>
-        <p><?php
-        //desicion tree for meal price
+        <p><?php //desicion tree for meal price
         if($total_cost < 20){
             echo 'Bargain price.';
         } elseif($total_cost > 20 || $total_cost < 40){
@@ -51,5 +40,16 @@ for($counter = 0; $counter < 11; $counter++){
         }
         ?></p>
         <h2>Random Drawing for a Free Meal!</h2>
+        <p>If your random number is in 5, 6, or 7, you can come in for a free meal!</p>
+        <p><?php //for loop for free meal
+        $random_number = rand(5, 7);
+        for($counter = 0; $counter < 11; $counter++){
+            echo $counter;
+        if($counter == $random_number){
+            echo ' is your random number';
+        }
+        echo nl2br("\n");
+        }
+        ?></p>
     </body>
 </html>
