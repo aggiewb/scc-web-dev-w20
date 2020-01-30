@@ -11,3 +11,7 @@ ul, p {
     color: #466060;
     font-family: 'Open Sans', sans-serif;
 }
+
+ul {
+    list-style-type: none;
+}
