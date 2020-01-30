@@ -1,0 +1,13 @@
+body {
+    background-color: #efefd0;
+}
+
+h1, h2 {
+    color: #004e89;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul, p {
+    color: #466060;
+    font-family: 'Open Sans', sans-serif;
+}
