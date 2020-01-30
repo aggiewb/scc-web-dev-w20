@@ -28,7 +28,7 @@ if($total_cost < 20){
 $random_number = rand(5, 7);
 for($counter = 0; $counter < 11; $counter++){
     echo $counter;
-    if($counter = $random_number){
+    if($counter == $random_number){
         echo 'is your random number';
     }
 }
