@@ -1,6 +1,6 @@
 <?php
 //total meal cost section variables
-$meal_cost = 41.55;
+$meal_cost = rand(0, 5000) / 100; //random dollar amount in between 0 and 50
 $tip_percent = 20 / 100;
 $tip_amount = $meal_cost * $tip_percent;
 $tax_percent = 10.1 / 100;
@@ -31,7 +31,7 @@ $total_cost_f = '$' . number_format($total_cost, 2);
         <p><?php //desicion tree for meal price
         if($total_cost < 20){
             echo 'Bargain price.';
-        } elseif($total_cost > 20 || $total_cost < 40){
+        } elseif($total_cost > 20 && $total_cost < 40){
             echo 'Moderate price.';
         } elseif($total_cost > 40) {
             echo 'That is a pricey meal!';
