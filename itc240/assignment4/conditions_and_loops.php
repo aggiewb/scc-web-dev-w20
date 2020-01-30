@@ -26,7 +26,7 @@ if($total_cost < 20){
 
 //for loop for free meal
 $random_number = rand(5, 7);
-for($counter = 0, $count < 11; $counter++){
+for($counter = 0, $counter < 11; $counter++){
     echo $counter;
     if($counter = $random_number){
         echo 'is your random number';
