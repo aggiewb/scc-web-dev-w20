@@ -15,9 +15,9 @@ $total_cost_f = number_format($total_cost, 2);
 
 //desicion tree for meal price
 if($total_cost < 20){
-    echo 'Good price';
+    echo 'Bargain price.';
 } elseif($total_cost > 20 || $total_cost < 40){
-    echo 'Reasonably price';
+    echo 'Moderate price.';
 } elseif($total_cost > 40) {
     echo 'That is a pricey meal!';
 } else {
@@ -33,3 +33,13 @@ for($counter = 0; $counter < 11; $counter++){
     }
 }
 ?>
+
+<html>
+    <head></head>
+    <body>
+        <h1>Assignment 3</h1>
+        <h2>Total Meal Cost:</h2>
+        <h2>How pricey is this meal?!</h2>
+        <h2>Random Drawing for a Free Meal!</h2>
+    </body>
+</html>
