@@ -5,6 +5,7 @@ public class Class_practice {
 
 	}
 	
+	
 	public static void printNumbers(int maxNum) {
 		for(int i = 1; i < maxNum; i++) {
 			System.out.print(i + ", ");
@@ -12,6 +13,7 @@ public class Class_practice {
 		
 		System.out.print(maxNum);
 	}
+	
 	
 	public static void printPrimes(int maxNum) {
 		if(maxNum >= 2) {
@@ -39,6 +41,7 @@ public class Class_practice {
 		
 	}
 	
+	
 	public static void whileLoop(int x) {
 		int count = 1;
 		while(count <= 100) {
@@ -46,6 +49,7 @@ public class Class_practice {
 			count = count * 2;
 		}
 	}
+	
 	
 	public static void firstFactor(int x) {
 		//finds the first factor of 91, other than 1
