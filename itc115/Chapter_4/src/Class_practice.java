@@ -81,5 +81,24 @@ public class Class_practice {
 			System.out.println("Scissors!");
 		}
 	}
+	
+	
+	
+	public static void sixSideDice() {
+		Random rand = new Random();
+		int count = 0;
+		int sum = 0;
+		
+		while(sum != 7) {
+			int diceOne = rand.nextInt(7);
+			int diceTwo = rand.nextInt(7);
+			sum = diceOne + diceTwo;
+			System.out.println(diceOne + " + " + diceTwo + " = " + sum);
+			count++;
+		}
+		
+		System.out.println("You won after " + count + " tries.");
+		
+	}
 }
 	
