@@ -1,7 +1,7 @@
 
 public class Class_practice {
 
-	public static void main(String[] args) {	
+	public static void main(String[] args) {
 
 	}
 	
@@ -45,6 +45,16 @@ public class Class_practice {
 			System.out.print(count + " ");
 			count = count * 2;
 		}
+	}
+	
+	public static void firstFactor(int x) {
+		//finds the first factor of 91, other than 1
+		int factor = 2;
+		while(x % factor != 0) {
+			factor++;
+		}
+		
+		System.out.println("First factor is " + factor);
 	}
 	
 	
