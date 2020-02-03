@@ -1,3 +1,5 @@
+import java.util.*;
+
 
 public class Class_practice {
 
@@ -62,5 +64,11 @@ public class Class_practice {
 	}
 	
 	
-
+	public static void randomNumber(int x) {
+		Random rand = new Random();
+		System.out.println(rand.nextInt(x));
+	}
+	
+	
+	
 }
