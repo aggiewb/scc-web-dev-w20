@@ -1,9 +1,7 @@
 
 public class Class_practice {
 
-	public static void main(String[] args) {
-		printPrimes(23);
-		
+	public static void main(String[] args) {	
 
 	}
 	
@@ -39,6 +37,14 @@ public class Class_practice {
 		
 		return count;
 		
+	}
+	
+	public static void whileLoop(int x) {
+		int count = 1;
+		while(count <= 100) {
+			System.out.print(count + " ");
+			count = count * 2;
+		}
 	}
 	
 	
