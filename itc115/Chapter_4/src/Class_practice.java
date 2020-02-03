@@ -69,6 +69,17 @@ public class Class_practice {
 		System.out.println(rand.nextInt(x));
 	}
 	
-	
-	
+	public static void rockPaperScissors() {
+		Random turn = new Random();
+		int inPlay = turn.nextInt(3);
+		
+		if(inPlay == 0) {
+			System.out.println("Rock!");
+		} else if(inPlay == 1) {
+			System.out.println("Paper!");
+		} else if(inPlay == 2) {
+			System.out.println("Scissors!");
+		}
+	}
 }
+	
