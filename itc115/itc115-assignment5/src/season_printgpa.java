@@ -1,6 +1,11 @@
 
 import java.util.*;
 
+//This class includes two methods call season and printGPA.
+//Above each class is a commented description of its purpose.
+//Aggie Wheeler Bateman
+//6 Feb 2019
+
 public class season_printgpa {
 
 	public static void main(String[] args) {
@@ -21,6 +26,13 @@ public class season_printgpa {
 		season(12, 16);
 	}
 	
+//The following is a method that takes two integers as parameters representing a month and day 
+//and returns a String indicating the season for that month and day. 
+//If the date falls between 12/16 and 3/15, "Winter" will be returned. 
+//If the date falls between 3/16 and 6/15, "Spring" will be returned. 
+//If the date falls between 6/16 and 9/15, "Summer" will be returned. 
+//If the date falls between 9/16 and 12/15, "Fall" will be returned. 
+	
 	public static String season(int month, int day){
 	    if(month == 1 || month == 2 || month == 12 && day > 15 || month == 3 && day < 16){
 	        System.out.println("Winter");
@@ -36,6 +48,10 @@ public class season_printgpa {
 	    	return "Fall";
 	    }
 	}
+	
+//The following is a method that calculates a student's grade point average. 
+//The user will type a line of input containing the student's name, 
+//then a number of scores, followed by that many integer scores.
 	
 	public static void printGPA(Scanner console){
 	    System.out.print("Enter a student record: ");
