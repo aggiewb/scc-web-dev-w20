@@ -59,11 +59,8 @@ public class season_printgpa {
 	    console.close();
 	   
 	    int spaceBetween = studentRecord.indexOf(" ");
-	    String studentName = "";
 	    
-	    for(int i = 0; i < spaceBetween; i++){
-	          studentName = studentName + studentRecord.charAt(i);
-	    }
+	    String studentName = studentRecord.substring(0, spaceBetween);
 	    
 	    int numOfScores = Character.getNumericValue(studentRecord.charAt(studentName.length() + 1));
 	    
