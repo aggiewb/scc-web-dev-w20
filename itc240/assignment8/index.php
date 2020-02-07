@@ -82,8 +82,8 @@ switch ($action) {
             "Name: $name\n" .
             "Email: $email\n" .
             "Phone: $phone\n\n";
-            "First Name: $first_name\n";
-            "Last Name: $last_name\n";
+            "First Name: $first_name\n"
+            "Last Name: $last_name\n"
 
 
 
