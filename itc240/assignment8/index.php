@@ -20,6 +20,9 @@ switch ($action) {
         $phone = trim($phone);
        
         // validate that name is not empty
+       if (empty($name)) {
+           $noName = "No name was found. Please resubmit file with your name."
+       }
        
         // capitalize the first letters only of the name
 
