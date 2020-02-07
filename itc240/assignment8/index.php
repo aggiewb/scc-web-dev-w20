@@ -15,11 +15,18 @@ switch ($action) {
         $phone = filter_input(INPUT_POST, 'phone');
 
         // trim the spaces from the start and end of all data
+        $name = trim($name);
+        $email = trim($email);
+        $phone = trim($phone);
        
         // validate that name is not empty
-       
-        // capitalize the first letters only of the name
+       if (empty($name)) {
+           $message = "No name was found. Please resubmit file with your name.";
+           break;
+       }
 
+        // capitalize the first letters only of the name
+        $name = ucfirst($name);
 
         // get first name from complete name  
         $i = strpos($name, ' ');
