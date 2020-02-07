@@ -21,7 +21,7 @@ switch ($action) {
        
         // validate that name is not empty
        if (empty($name)) {
-           $message = "No name was found. Please resubmit file with your name.";
+           $message = 'You must enter your name.';
            break;
        }
 
@@ -34,6 +34,7 @@ switch ($action) {
             $first_name = $name;
         } else {
             $first_name = substr($name, 0, $i);
+            $last_name = substr($name, strlen($first_name));
         }
 
         // validate email
@@ -78,7 +79,13 @@ switch ($action) {
             "Thank you for entering this data:\n\n" .
             "Name: $name\n" .
             "Email: $email\n" .
-            "Phone: $phone\n";
+            "Phone: $phone\n\n" .
+            "First Name: $first_name\n" .
+            "Last Name: $last_name\n\n" .
+            "Area code: $part1\n" .
+            "Phone number: $phone";  
+
+
 
         break;
 }
