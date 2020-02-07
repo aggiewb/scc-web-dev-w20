@@ -15,6 +15,9 @@ switch ($action) {
         $phone = filter_input(INPUT_POST, 'phone');
 
         // trim the spaces from the start and end of all data
+        $name = trim($name);
+        $email = trim($email);
+        $phone = trim($phone);
        
         // validate that name is not empty
        
