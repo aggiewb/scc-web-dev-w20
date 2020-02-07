@@ -85,9 +85,6 @@ switch ($action) {
             "Last Name: $last_name\n\n" .
             "Area code: $areaCode\n" .
             "Phone number: $shortPhone";  
-
-
-
         break;
 }
 include 'string_tester.php';
