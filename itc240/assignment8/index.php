@@ -36,6 +36,9 @@ switch ($action) {
             $first_name = substr($name, 0, $i);
         }
 
+        //get last name from complete name
+        $last_name = substr($name, (strlen($first_name));
+
         // validate email
         if (empty($email)) {
             $message = 'You must enter an email address.';
@@ -78,7 +81,11 @@ switch ($action) {
             "Thank you for entering this data:\n\n" .
             "Name: $name\n" .
             "Email: $email\n" .
-            "Phone: $phone\n";
+            "Phone: $phone\n\n";
+            "First Name: $first_name\n";
+            "Last Name: $last_name\n";
+
+
 
         break;
 }
