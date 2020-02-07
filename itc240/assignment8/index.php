@@ -28,7 +28,7 @@ switch ($action) {
         // capitalize the first letters only of the name
         $name = ucfirst($name);
 
-        // get first name from complete name  
+        // get first and last name from complete name  
         $i = strpos($name, ' ');
         if ($i === false) {
             $first_name = $name;
@@ -65,12 +65,13 @@ switch ($action) {
         if (strlen($phone) == 7) {
             $part1 = substr($phone, 0, 3);
             $part2 = substr($phone, 3);
-            $phone = $part1 . '-' . $part2;
+            $shortPhone = $part1 . '-' . $part2;
         } else {
-            $part1 = substr($phone, 0, 3);
-            $part2 = substr($phone, 3, 3);
-            $part3 = substr($phone, 6);
-            $phone = $part1 . '-' . $part2 . '-' . $part3;
+            $areaCode = substr($phone, 0, 3);
+            $part1 = substr($phone, 3, 3);
+            $part2 = substr($phone, 6);
+            $shortPhone = $part1 . '-' . $part2;
+            $phone = $areaCode . '-' . $shortPhone;
         }
 
         // format the message
@@ -82,8 +83,8 @@ switch ($action) {
             "Phone: $phone\n\n" .
             "First Name: $first_name\n" .
             "Last Name: $last_name\n\n" .
-            "Area code: $part1\n" .
-            "Phone number: $phone";  
+            "Area code: $areaCode\n" .
+            "Phone number: $shortPhone";  
 
 
 
