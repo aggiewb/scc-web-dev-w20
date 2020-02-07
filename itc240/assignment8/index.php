@@ -21,11 +21,12 @@ switch ($action) {
        
         // validate that name is not empty
        if (empty($name)) {
-           $noName = "No name was found. Please resubmit file with your name."
+           $message = "No name was found. Please resubmit file with your name.";
+           break;
        }
-       
-        // capitalize the first letters only of the name
 
+        // capitalize the first letters only of the name
+        $name = ucfirst($name);
 
         // get first name from complete name  
         $i = strpos($name, ' ');
