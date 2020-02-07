@@ -21,7 +21,7 @@ switch ($action) {
        
         // validate that name is not empty
        if (empty($name)) {
-           $message = "You must enter your name.";
+           $message = 'You must enter your name.';
            break;
        }
 
