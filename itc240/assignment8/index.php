@@ -66,6 +66,7 @@ switch ($action) {
             $part1 = substr($phone, 0, 3);
             $part2 = substr($phone, 3);
             $phone = $part1 . '-' . $part2;
+            $shortPhone = $phone;
         } else {
             $areaCode = substr($phone, 0, 3);
             $part1 = substr($phone, 3, 3);
