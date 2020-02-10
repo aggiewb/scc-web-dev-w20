@@ -1,0 +1,5 @@
+Hello world
+
+This program produces
+four lines of outupt
+the old content is gone
