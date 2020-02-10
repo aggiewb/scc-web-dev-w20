@@ -14,6 +14,8 @@ public class TestFile {
 		output.println("the old content is gone");
 		
 		output.close();
+		
+		testFile1();
 	
 
 	}
