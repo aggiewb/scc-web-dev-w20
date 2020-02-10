@@ -11,19 +11,23 @@ public class season_printgpa {
 	public static void main(String[] args) {
 		Scanner console = new Scanner(System.in);
 		printGPA(console);
-		season(1, 21);
-		season(2, 28);
-		season(3, 15);
-		season(3, 16);
-		season(4, 1);
-		season(6, 15);
-		season(6, 16);
-		season(8, 9);
-		season(9, 15);
-		season(9, 16);
-		season(10, 31);
-		season(12, 15);
-		season(12, 16);
+		season(1, 21); //Winter
+		season(2, 28); //Winter
+		season(3, 15); //Winter
+		season(3, 16); //Spring
+		season(4, 1);  //Spring
+		season(6, 15); //Spring
+		season(6, 16); //Summer
+		season(8, 9);  //Summer
+		season(9, 15); //Summer
+		season(9, 16); //Fall
+		season(10, 31); //Fall
+		season(12, 15); //Fall
+		season(12, 16); //Winter
+		Scanner consoleTest1 = new Scanner ("Maria 5 72 91 84 89 78");
+		printGPA(consoleTest1); //Maria's grade is 82.8
+		Scanner consoleTest2 = new Scanner ("Jordan 4 86 71 62 90");
+		printGPA(consoleTest2); //Jordan's grade is 77.25
 	}
 	
 //The following is a method that takes two integers as parameters representing a month and day 
