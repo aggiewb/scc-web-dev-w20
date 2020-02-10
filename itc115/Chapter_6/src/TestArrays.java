@@ -18,7 +18,14 @@ public class TestArrays {
 			numbers[i] = i * i;
 			System.out.print(numbers[i] + " ");
 		}
+		
+		
+		System.out.println();
+		int[] testData = {1, 2, 3, 4, 5};
+		System.out.println(Arrays.toString(testData));
 
 	}
 
 }
+
+
