@@ -1,10 +1,11 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
+import java.io.*;
+
 
 public class TestFile {
-
+	
 	public static void main(String[] args) throws FileNotFoundException {
+		divideZero();
+		
 		PrintStream output = new PrintStream(new File("hello.txt"));
 
 		output.println("Hello world");
@@ -28,6 +29,14 @@ public class TestFile {
 		System.out.println("Absolute path returns: " + f.getAbsolutePath());
 	}
 	
-	
+	public static void divideZero() {
+		try {
+			int a = 30, b = 0;
+			int c = a/b;
+			System.out.println("Result = " + c);
+		} catch(Exception e) {
+			System.out.println("STOP!");
+		}
+	}
 
 }
