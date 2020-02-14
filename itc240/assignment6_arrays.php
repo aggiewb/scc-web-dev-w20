@@ -17,10 +17,15 @@ Result: The array should now contain 1, 2, 3, 4, 42, 5, 6*/
 
 $numbers = array(1, 2, 3, 4, 5, 6);
 
+
 /*Given an array of week’s temperatures containing the items 32, 47, 55, 30, 42, 39, 45, calculate and display the average temperature as well as display the lowest and highest temperature in the week.
 Result Average temp this week : 41.4 Lowest temp: 30 Highest temp : 55 */
 
-$weekTemperatures = array(32, 47, 55, 30, 42, 39, 45);
+$weekTemps = array(32, 47, 55, 30, 42, 39, 45);
+sort($weekTemps)
+$avgWeekTemp = array_sum($weekTemps) / count($weekTemps);
+$highTemp = $weekTemps[count($weekTemp) - 1];
+$lowTemp = $weekTemps[0];
 ?>
 
 <html>
@@ -43,7 +48,7 @@ $weekTemperatures = array(32, 47, 55, 30, 42, 39, 45);
         ?>
 
         <h2>Part 3</h2>
-        <p></p>
+        <p>Average temp this week: <?php echo $avgWeekTemp?>. Lowest temp: <?php echo $lowTemp?>. Highest temp: <?php echo $highTemp?>.</p>
 
         <h2>Part 4</h2>
         <p></p>
