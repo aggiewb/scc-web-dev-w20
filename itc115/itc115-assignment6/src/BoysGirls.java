@@ -16,10 +16,10 @@ public class BoysGirls {
 	}
 	
 	public static void boyGirl(Scanner console) throws FileNotFoundException{
-		int boys = 0;
+		int boysSum = 0;
 		int boysCount = 0;
 		
-		int girls = 0;
+		int girlsSum = 0;
 		int girlsCount = 0;
 		
 		int count = 0;
@@ -30,17 +30,17 @@ public class BoysGirls {
 			count++;
 			if(count % 2 == 0){
 				girlsCount++;
-				girls += console.nextInt();
+				girlsSum += console.nextInt();
 				} else if (count % 2 != 0){
 					boysCount++;
-					boys += console.nextInt();
+					boysSum += console.nextInt();
 					}
 			}
 		
-		if(boys > girls){
-			difference = boys - girls;
+		if(boysSum > girlsSum){
+			difference = boysSum - girlsSum;
 			} else {
-				difference = girls - boys;
+				difference = girlsSum - boysSum;
 				}
 		
 		System.out.println(boysCount + " boys, " + girlsCount + " girls");
