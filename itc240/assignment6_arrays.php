@@ -42,7 +42,7 @@ $lowTemp = $weekTemps[0];
         <h2>Part 2</h2>
         <?php 
         echo'<ul>';
-        foreach ($statecaps as $state => $capital){
+        foreach($statecaps as $state => $capital){
             echo '<li>$state, $capital</li>';
         }
         echo '</ul>';
@@ -51,7 +51,7 @@ $lowTemp = $weekTemps[0];
         <h2>Part 3</h2>
         <p>The array should now contain 
         <?php
-        echo $numbers[i];
+        echo $numbers[0];
         for($i = 1; $i < count($numbers); $i++){
             echo ',' + $numbers[$i];
         }
