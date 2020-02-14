@@ -18,3 +18,24 @@ Result Average temp this week : 41.4 Lowest temp: 30 Highest temp : 55 */
 
 $weekTemperatures = array(32, 47, 55, 30, 42, 39, 45);
 ?>
+
+<html>
+    <head></head>
+    <body>
+        <h1>Assignment 6: Arrays</h1>
+        <p>This webpage is for a 4 part assignment that uses PHP arrays.</p>
+        <p>Aggie Wheeler Bateman</p>
+
+        <h2>Part 1</h2>
+        <p></p>
+        
+        <h2>Part 2</h2>
+        <p></p>
+
+        <h2>Part 3</h2>
+        <p></p>
+
+        <h2>Part 4</h2>
+        <p></p>
+    </body>
+</html>
