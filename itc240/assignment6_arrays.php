@@ -3,6 +3,9 @@
 Result: "You can adopt a dog, a cat, or a bird from the animal sanctuary." */
 
 $pets = array('dog', 'cat', 'fish', 'bird', 'iguana');
+$dog = $pets[0];
+$cat = $pets[1];
+$bird = $pets[3]
 
 /*Display the state and state capital from the below array $statecaps. Sort the list by the name of the capital. $statecaps = array("Washington => Olympia", "Oregon => Salem", "California => Sacramento", "Alaska => Juneau", "Hawaii => Honolulu", "Idaho => Boise", "Nevada => Carson City", "Arizona => Phoenix"); */
 
@@ -27,7 +30,7 @@ $weekTemperatures = array(32, 47, 55, 30, 42, 39, 45);
         <p>Aggie Wheeler Bateman</p>
 
         <h2>Part 1</h2>
-        <p>You can adopt a <?php echo $pets[0];?>, a <?php echo $pets[1];?>, or a <?php echo $pets[3]?> from the animal sanctuary.</p>
+        <p>You can adopt a <?php echo $dog;?>, a <?php echo $cat;?>, or a <?php echo $bird?> from the animal sanctuary.</p>
         
         <h2>Part 2</h2>
         <p></p>
