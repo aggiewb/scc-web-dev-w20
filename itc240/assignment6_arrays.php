@@ -27,7 +27,7 @@ $weekTemperatures = array(32, 47, 55, 30, 42, 39, 45);
         <p>Aggie Wheeler Bateman</p>
 
         <h2>Part 1</h2>
-        <p></p>
+        <p>You can adopt a <?php echo $pets[0];?>, a <?php echo $pets[1];?>, or a <?php echo $pets[3]?> from the animal sanctuary.</p>
         
         <h2>Part 2</h2>
         <p></p>
