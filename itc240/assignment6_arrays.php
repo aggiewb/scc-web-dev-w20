@@ -32,7 +32,7 @@ $lowTemp = $weekTemps[0];
 <html>
     <head>
     <title>Assignment 6: Arrays</title>
-    <link rel="stylesheet" href="basic_style.css">
+    <link rel="stylesheet" type="text/css" href="basic_style.css">
     <meta charset="UTF-8">
     </head>
     <body>
