@@ -30,7 +30,11 @@ $lowTemp = $weekTemps[0];
 ?>
 
 <html>
-    <head></head>
+    <head>
+    <title>Assignment 6: Arrays</title>
+    <link rel="stylesheet" href="basic_style.css">
+    <meta charset="UTF-8">
+    </head>
     <body>
         <h1>Assignment 6: Arrays</h1>
         <p>This webpage is for a 4 part assignment that uses PHP arrays.</p>
