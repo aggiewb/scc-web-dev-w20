@@ -31,7 +31,7 @@ function isPalindrome($str){
         </form>
         <p><?php 
         if(isset($userWord)){
-            if(isset(isPalindrome($userWord) == true){
+            if(isPalindrome($userWord) == true){
                 echo "Your word is a palindrome!";
             } elseif (isPalindrome($userWord) == false) {
                 echo "Your word is not a palindrome.";
