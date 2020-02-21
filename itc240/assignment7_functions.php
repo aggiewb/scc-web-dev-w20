@@ -7,6 +7,8 @@ function isPalindrome($str){
     $palindrome = strcmp($userWordPhrase, $backwardsWordPhrase);
     if($palindrome == 0){
         return true;
+    } else {
+        return false;
     }
 }
 
