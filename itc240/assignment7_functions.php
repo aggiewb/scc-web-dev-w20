@@ -3,7 +3,7 @@ $userWord = "";
 $userWord = $_POST['userWord'];
 
 function isPalindrome($str){
-    $str = strtolower($str);
+    $str = strtolower(htmlspecialchars($str));
     $backwardsWord = strrev($str);
     $palindrome = strcmp($str, $backwardsWord);
     if($palindrome == 0){
