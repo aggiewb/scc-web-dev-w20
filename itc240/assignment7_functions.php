@@ -16,7 +16,7 @@ function isPalindrome($str){
 if(isPalindrome($userWordPhrase) == true){
     $isPalindrome = "Your word or phrase is a palindrome!";
 } else {
-    $isPalindrome = "Your word or phrase is not a palindrome."
+    $isPalindrome = "Your word or phrase is not a palindrome.";
 }
 
 ?>
