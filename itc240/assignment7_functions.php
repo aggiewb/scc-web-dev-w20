@@ -13,7 +13,7 @@ function isPalindrome($str){
     }
 }
 
-$arr = [22, 15, -2, 4]
+$arr = [22, 15, -2, 4];
 function sortArray($arr){
     for($i = 0; $i < count($arr); $i++){
         for($j = $i + 1; $j < count($arr); $j++){
@@ -55,7 +55,7 @@ function sortArray($arr){
         ?></p>
         <h2>Sorting an Array</h2>
         <p>This section demonstrates sorting an array with the use of a built in PHP function. Instead it uses a personally built function that takes an array as argument and return the sorted array. Both the unsorted and sorted array will be print using print_r function.</p>
-        <p>The unsorted array is <?php print_r($arr) ?></p>
+        <p>The unsorted array is <?php print_r($arr); ?></p>
         <p>The sorted array is <? print_r(sortArray($arr)); ?></p>
     </body>
 </html>
