@@ -4,14 +4,13 @@ $userWordPhrase = $_POST['userWordPhrase'];
 
 function isPalindrome($str){
     $backwardsWordPhrase = strrev($str);
-    $palindrome = strcmp($userWordPhrase, $backwardsWordPhrase);
+    $palindrome = strcmp($str, $backwardsWordPhrase);
     if($palindrome == 0){
         return true;
     } else {
         return false;
     }
 }
-
 
 if(isPalindrome($userWordPhrase) == true){
     $isPalindrome = "Your word or phrase is a palindrome!";
