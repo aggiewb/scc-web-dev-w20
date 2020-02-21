@@ -11,6 +11,12 @@ function isPalindrome($str){
 }
 
 
+if(isPalindrome($userWordPhrase) == true){
+    $isPalindrome = "Your word or phrase is a palindrome!";
+} else {
+    $isPalindrome = "Your word or phrase is not a palindrome."
+}
+
 ?>
 <html>
     <head></head>
@@ -20,5 +26,7 @@ function isPalindrome($str){
             <input type="text" id="userWordPhrase" name="userWordPhrase">
             <input type="submit" value="Submit">
         </form>
+
+        <p><?php echo $isPalindrome ?></p>
     </body>
 </html>
