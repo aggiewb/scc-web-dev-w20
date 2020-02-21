@@ -32,7 +32,6 @@ if(isPalindrome($userWordPhrase) == true){
             <input type="text" id="userWordPhrase" name="userWordPhrase">
             <input type="submit" value="Submit">
         </form>
-
         <p><?php echo $isPalindrome ?></p>
     </body>
 </html>
