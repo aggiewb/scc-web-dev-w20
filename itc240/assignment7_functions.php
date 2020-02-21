@@ -38,7 +38,7 @@ function sortArray($arr){
         <h1>Assignment 7: PHP Functions</h1>
         <p>This is for a two part assignment to test my knowledge of functions.</p>
         <h2>To palindrome or not to palindrome, that is the question!</h2>
-        <p>A palindrome is a word hat reads the same backward as forward, e.g., radar or kayak. Input a word that will be checked to see if it's a palindrome.</p>
+        <p>A palindrome is a word that reads the same backward as forward, e.g., radar or kayak. Input a word that will be checked to see if it's a palindrome.</p>
         <form method="post">
             <label for="userWord">Enter a word:</label>
             <input type="text" id="userWord" name="userWord">
