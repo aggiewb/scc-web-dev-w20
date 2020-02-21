@@ -21,7 +21,11 @@ if(isPalindrome($userWordPhrase) == true){
 
 ?>
 <html>
-    <head></head>
+    <head>
+        <title>Assignment 7</title>
+        <link rel="stylesheet" type="text/css" href="basic_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet"> 
+    </head>
     <body>
         <h1>Assignment 7: PHP Functions</h1>
         <p>This is for a two part assignment to test my knowledge of functions.</p>
