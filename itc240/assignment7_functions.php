@@ -25,6 +25,8 @@ if(isPalindrome($userWordPhrase) == true){
     <body>
         <h1>Assignment 7: PHP Functions</h1>
         <p>This is for a two part assignment to test my knowledge of functions.</p>
+        <h2>To palindrome or not to palindrome, that is the question!</h2>
+        <p>Input a word or phrase that will be checked to see if it's a palindrome.</p>
         <form method="post">
             <label for="userWordPhrase">Enter word or phrase:</label>
             <input type="text" id="userWordPhrase" name="userWordPhrase">
