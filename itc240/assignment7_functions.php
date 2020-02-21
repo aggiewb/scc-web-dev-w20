@@ -1,21 +1,15 @@
 <?php
-
-$userWordPhrase = $_POST['userWordPhrase'];
+$userWord = "";
+$userWord = $_POST['userWord'];
 
 function isPalindrome($str){
-    $backwardsWordPhrase = strrev($str);
-    $palindrome = strcmp($str, $backwardsWordPhrase);
+    $backwardsWord = strrev($str);
+    $palindrome = strcmp($str, $backwardsWord);
     if($palindrome == 0){
         return true;
     } else {
         return false;
     }
-}
-
-if(isPalindrome($userWordPhrase) == true){
-    $isPalindrome = "Your word or phrase is a palindrome!";
-} else {
-    $isPalindrome = "Your word or phrase is not a palindrome.";
 }
 
 ?>
@@ -29,12 +23,20 @@ if(isPalindrome($userWordPhrase) == true){
         <h1>Assignment 7: PHP Functions</h1>
         <p>This is for a two part assignment to test my knowledge of functions.</p>
         <h2>To palindrome or not to palindrome, that is the question!</h2>
-        <p>Input a word or phrase that will be checked to see if it's a palindrome.</p>
+        <p>A palindrome is a word hat reads the same backward as forward, e.g., radar or kayak. Input a word that will be checked to see if it's a palindrome.</p>
         <form method="post">
-            <label for="userWordPhrase">Enter word or phrase:</label>
-            <input type="text" id="userWordPhrase" name="userWordPhrase">
+            <label for="userWord">Enter a word:</label>
+            <input type="text" id="userWord" name="userWord">
             <input type="submit" value="Submit">
         </form>
-        <p><?php echo $isPalindrome ?></p>
+        <p><?php 
+        if(isset($userWordPhrase)){
+            if(isset(isPalindrome($userWord) == true){
+                echo "Your word is a palindrome!";
+            } elseif (isPalindrome($userWord) == false) {
+                echo "Your word is not a palindrome.";
+            }
+        } 
+        ?></p>
     </body>
 </html>
