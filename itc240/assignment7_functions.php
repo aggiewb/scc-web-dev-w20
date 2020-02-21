@@ -13,6 +13,7 @@ function isPalindrome($str){
     }
 }
 
+$arr = [22, 15, -2, 4]
 function sortArray($arr){
     for($i = 0; $i < count($arr); $i++){
         for($j = $i + 1; $j < count($arr); $j++){
