@@ -23,6 +23,8 @@ if(isPalindrome($userWordPhrase) == true){
 <html>
     <head></head>
     <body>
+        <h1>Assignment 7: PHP Functions</h1>
+        <p>This is for a two part assignment to test my knowledge of functions.</p>
         <form method="post">
             <label for="userWordPhrase">Enter word or phrase:</label>
             <input type="text" id="userWordPhrase" name="userWordPhrase">
