@@ -34,24 +34,16 @@ public class IsSorted {
 	}
 	
 	public static boolean isSorted(double[] num){
-	    boolean isSorted = false;
-	    
-	    double[] newNum = Arrays.copyOf(num, num.length);
-	    
-	    for(int i = 0; i < newNum.length - 1; i++){
-	        for(int j = i + 1; j < newNum.length; j++){
-	            if(newNum[i] > newNum[j]){
-	                double temp = newNum[i];
-	                newNum[i] = newNum[j];
-	                newNum[j] = temp;
+	    boolean isSorted = true;
+	     
+	    for(int i = 0; i < num.length - 1; i++){
+	        for(int j = i + 1; j < num.length; j++){
+	            if(num[i] > num[j]){
+	                isSorted = false;
 	            }
 	        }
 	    }
 	    
-	    if(Arrays.equals(newNum, num)){
-	        isSorted = true;
-	    }
-	       
 	    return isSorted;
 	}
 
