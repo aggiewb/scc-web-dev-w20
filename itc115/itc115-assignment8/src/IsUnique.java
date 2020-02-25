@@ -10,7 +10,29 @@ import java.util.*;
 public class IsUnique {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int[] arr1 = {2, 4, 6}; 
+		System.out.println(isUnique(arr1));
+		// return true
+		
+		int[] arr2 = {};
+		System.out.println(isUnique(arr2));
+		// return true
+		
+		int[] arr3 = {1};
+		System.out.println(isUnique(arr3));
+		//return true
+		
+		int[] arr4 = {1, 3, 3};
+		System.out.println(isUnique(arr4));
+		//return false
+		
+		int[] arr5 = {2, 4, 6, 8, 10, 12, -2, -4};
+		System.out.println(isUnique(arr5));
+		//return true
+		
+		int[] arr6 = {2, 4, 6, 8, 10, 12, -2, -4, 2};
+		System.out.println(isUnique(arr6));
+		//return false
 
 	}
 	
