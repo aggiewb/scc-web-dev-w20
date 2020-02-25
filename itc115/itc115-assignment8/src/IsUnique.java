@@ -13,5 +13,20 @@ public class IsUnique {
 		// TODO Auto-generated method stub
 
 	}
+	
+	public static boolean isUnique(int[] num){
+	    boolean isUnique = true;
+	    
+	    for(int i = 0; i < num.length - 1; i++){
+	        for(int j = i + 1; j < num.length; j++){
+	            if(num[i] == num[j]){
+	                isUnique = false;
+	                return isUnique;
+	            }
+	        }
+	    }
+	    
+	    return isUnique;
+	}
 
 }
