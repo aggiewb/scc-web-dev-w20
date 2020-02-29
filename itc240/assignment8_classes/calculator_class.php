@@ -3,21 +3,26 @@
 class Calculator {
     var $num1 = 0;
     var $num2 = 0;
+    var $result = 0;
 
-    function add($num1, $num2){
-
+    function add(){
+        $this->result = $this->num1 + $this->num2;
+        return $this->result; 
     }
 
-    function substract($num1, $num2){
-        
+    function substract(){
+        $this->result = $this->num1 - $this->num2;
+        return $this->result;   
     }
 
-    function divide($num1, $num2){
-        
+    function divide(){
+        $this->result = $this->num1 / $this->num2;
+        return $this->result;   
     }
 
-    function multiply($num1, $num2){
-        
+    function multiply(){
+        $this->result = $this->num1 * $this->num2;
+        return $this->result; 
     }
 }
 
