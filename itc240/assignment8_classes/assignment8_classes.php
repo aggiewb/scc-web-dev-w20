@@ -5,9 +5,9 @@ Your class should have the ability to add, subtract, multiply or divide two numb
 Be sure to add several tests for your calculator class. */
 
 class Calculator {
-    public var $num1 = 0;
-    public var $num2 = 0;
-    public var $result = 0;
+    public $num1 = 0;
+    public $num2 = 0;
+    public $result = 0;
 
     function add(){
         $this->result = $this->num1 + $this->num2;
@@ -29,5 +29,16 @@ class Calculator {
         return $this->result; 
     }
 }
-
 ?>
+
+<html>
+    <head>
+        <title>Assignment 8</title>
+    </head>
+    <body>
+        <h1>Assignment 8: PHP Classes</h1>
+        <p>This calculator tests my knowledge of PHP classes.</p>
+        <form>
+        </form>
+    </body>
+</html>
