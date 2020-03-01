@@ -49,5 +49,21 @@ class Calculator {
             <input type="number" name="num2">
             <input type="submit" value="equals">
         </form>
+        <?php
+        $calc = new Calculator;
+        $calc->num1 = $_POST['num1'];
+        $calc->num2 = $_POST['num2'];
+        
+        if($POST['operations'] == 'add'){
+            $calc->result = $calc->add();
+        } elseif($POST['operations'] == 'sub'){
+            $calc->result = $calc->sub();
+        } elseif($POST['operations'] == 'mult'){
+            $calc->result = $calc->mutiply();
+        } else {
+            $calc->result = $calc->divide();
+        }
+        ?>
+        <p>=<?php echo $calc->result?></p>
     </body>
 </html>
