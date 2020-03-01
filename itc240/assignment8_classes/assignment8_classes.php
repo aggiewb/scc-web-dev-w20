@@ -42,8 +42,8 @@ class Calculator {
             <input type="number" name="num1">
             <select name="operations">
                 <option value="add">PLUS(+)</option>
-                <option value="sub">MINUS(-)<option>
-                <option value="mult">TIMES(*)<option>
+                <option value="sub">MINUS(-)</option>
+                <option value="mult">TIMES(*)</option>
                 <option value="div">DIVIDED BY(/)</option>
             </select>
             <input type="number" name="num2">
