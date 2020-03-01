@@ -39,6 +39,15 @@ class Calculator {
         <h1>Assignment 8: PHP Classes</h1>
         <p>This calculator tests my knowledge of PHP classes.</p>
         <form>
+            <input type="number" name="num1">
+            <select name="operations">
+                <option value="add">PLUS(+)</option>
+                <option value="sub">MINUS(-)<option>
+                <option value="mult">TIMES(*)<option>
+                <option value="div">DIVIDED BY(/)</option>
+            </select>
+            <input type="number" name="num2">
+            <input type="submit" value="equals">
         </form>
     </body>
 </html>
