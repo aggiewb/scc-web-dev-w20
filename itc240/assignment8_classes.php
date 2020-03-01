@@ -35,7 +35,7 @@ class Calculator {
 <html>
     <head>
         <title>Assignment 8</title>
-        <link rel="stylesheet" type="text/css" href="../basic_style.css">
+        <link rel="stylesheet" type="text/css" href="basic_style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet"> 
     </head>
     <body>
