@@ -13,6 +13,15 @@ public class UsePoint {
 		
 		//demonstrate static method within a class
 		Point.hiPoint();
+		
+		Point2 newP = new Point2(1, 2);
+		
+		System.out.println(newP.toString());
+		
+		newP.setX(4);
+		newP.setY(23);
+		
+		System.out.println(newP.toString());
 
 	}
 
