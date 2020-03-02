@@ -1,8 +1,8 @@
 //Point object to represent a pair of coordinates
 public class Point {
 	//fields(attributes)
-	int x;
-	int y;
+	private int x;
+	private int y;
 	
 	//constructor to construct a new point with the given x and y location
 	public Point (int initialX, int initialY) {
@@ -19,6 +19,10 @@ public class Point {
 	public void translate(int dX, int dY) {
 		x += dX;
 		y += dY;
-	}	
+	}
+	
+	public static void hiPoint() {
+		System.out.println("Hi from the static method");
+	}
 
 }
