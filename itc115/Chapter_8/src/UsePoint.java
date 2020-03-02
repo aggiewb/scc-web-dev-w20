@@ -22,6 +22,14 @@ public class UsePoint {
 		newP.setY(23);
 		
 		System.out.println(newP.toString());
+		
+		Point2[] points = new Point2[2];
+		points[0] = new Point2(11, 22);
+		points[1] = new Point2(33, 44);
+		
+		for(Point2 p2: points) {
+			System.out.println(p2.toString());
+		}
 
 	}
 
