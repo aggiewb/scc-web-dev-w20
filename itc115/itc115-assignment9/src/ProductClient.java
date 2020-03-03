@@ -8,6 +8,8 @@ public class ProductClient {
 		
 		userInput(input, newProducts);
 		userOutput(newProducts);
+		addUserProductPrices(newProducts);
+		
 		input.close();
 	}
 	
@@ -27,6 +29,16 @@ public class ProductClient {
 		for(int i = 0; i < 3; i++) {
 			System.out.println("Product number " + (i + 1) + " is " + newProducts[i]);
 		}
+	}
+	
+	public static void addUserProductPrices(Product[] newProducts) {
+		double price = 0;
+		for(int i = 0; i < 3; i++) {
+			price = newProducts[i].getPrice();
+			Product.totalProductPrice(price);
+		}
+		
+		System.out.println("The total price of all products is " + Product.getTotalPriceFormatted() + ".");
 	}
 	
 }
