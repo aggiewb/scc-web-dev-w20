@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 
 public class Product {
 	private String productCode;
@@ -13,11 +14,22 @@ public class Product {
 	
 	//toString
 	public String toString() {
-		return this.productCode + " " + this.price;
+		return this.productCode + " " + getPriceFormatted();
 	}
 	
 	//getters
-	//setters
-	//formatted output of price(use NumberFormat class)
+	public String getProductCode() {
+		return this.productCode;
+	}
+	
+	public String getPriceFormatted() {
+		String formattedPrice = NumberFormat.getCurrencyInstance().format(this.price);
+		return formattedPrice;
+	}
+	
+	//setter
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
 }
