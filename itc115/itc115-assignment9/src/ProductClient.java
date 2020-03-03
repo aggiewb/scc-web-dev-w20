@@ -13,7 +13,7 @@ public class ProductClient {
 	
 	public static void userInput(Scanner console, Product[] newProducts) {
 		for(int i = 0; i < 3; i++) {
-			System.out.print("Please enter your product name and price: ");
+			System.out.print("Please enter your product code and price: ");
 			String productName = console.next();
 			double price = console.nextDouble();
 			newProducts[i] = new Product(productName, price);
