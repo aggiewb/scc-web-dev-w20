@@ -5,8 +5,17 @@ public class Product {
 	private double price;
 	private int productCount;
 	
-	//constructors
+	//constructor
+	public Product(String productCode, double price) {
+		this.productCode = productCode;
+		this.price = price;
+	}
+	
 	//toString
+	public String toString() {
+		return this.productCode + " " + this.price;
+	}
+	
 	//getters
 	//setters
 	//formatted output of price(use NumberFormat class)
