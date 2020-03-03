@@ -6,6 +6,8 @@ public class ProductClient {
 		Scanner input = new Scanner(System.in);
 		Product[] newProducts = new Product[3];
 		
+		System.out.println("Welcome to AggieMart!");
+		System.out.println("You'll be allowed to enter three products to be entered into the marketplace.");
 		userInput(input, newProducts);
 		userOutput(newProducts);
 		addUserProductPrices(newProducts);
