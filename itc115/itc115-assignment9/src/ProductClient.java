@@ -19,13 +19,13 @@ public class ProductClient {
 			newProducts[i] = new Product(productName, price);
 			System.out.print("Enter the product description: ");
 			String description = console.next();
-			newProducts[i].setDescription(description); 
-		}	
+			newProducts[i].setDescription(description);
+		}
 	}
 	
 	public static void userOutput(Product[] newProducts) {
-		for(int j = 0; j < 3; j++) {
-			System.out.println("Product number " + (j + 1) + " is " + newProducts[j]);
+		for(int i = 0; i < 3; i++) {
+			System.out.println("Product number " + (i + 1) + " is " + newProducts[i]);
 		}
 	}
 	
