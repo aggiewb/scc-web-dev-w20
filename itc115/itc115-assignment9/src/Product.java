@@ -31,5 +31,10 @@ public class Product {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	//track count of total products made
+	public int getCount() {
+		return productCount++;
+	}
 
 }
