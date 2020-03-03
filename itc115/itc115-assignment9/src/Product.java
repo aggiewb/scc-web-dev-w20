@@ -4,17 +4,19 @@ public class Product {
 	private String productCode;
 	private String description;
 	private double price;
-	private int productCount;
 	
 	//constructor
 	public Product(String productCode, double price) {
+		if(price <= 0) {
+			throw new IllegalArgumentException();
+		}
 		this.productCode = productCode;
 		this.price = price;
 	}
 	
 	//toString
 	public String toString() {
-		return this.productCode + " " + getPriceFormatted();
+		return this.productCode + " " + getPriceFormatted() + " " + description;
 	}
 	
 	//getters
@@ -30,11 +32,6 @@ public class Product {
 	//setter
 	public void setDescription(String description) {
 		this.description = description;
-	}
-	
-	//track count of total products made
-	public int getCount() {
-		return productCount++;
 	}
 
 }
