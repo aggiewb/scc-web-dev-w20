@@ -54,7 +54,7 @@ public class StockClient {
         double currentPrice = console.nextDouble();
 
         double profit = currentStock.getProfit(currentPrice);
-        System.out.println("Net profit/loss: $" + profit);
+        System.out.printf("Net profit/loss: $%.2f", profit);
         System.out.println();
         return profit;
     }
