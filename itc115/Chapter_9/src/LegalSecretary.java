@@ -6,7 +6,8 @@ public class LegalSecretary extends Secretary{
     }
 
     public void showSalary() {
-        System.out.println("My salary is $45,000");
+        System.out.printf("My salary is $%.2f", (super.getSalary() + 5000.00));
+        System.out.println();
         
     }
     
