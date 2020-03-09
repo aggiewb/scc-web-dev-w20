@@ -10,10 +10,15 @@ public class Employee {
     }
     
     public void showSalary() {
-        System.out.println("My salary is $40,000");
+        System.out.printf("My salary is $%.2f", getSalary());
+        System.out.println();
     }
     
     public void showVacation() {
         System.out.println("I receive 2 weeks of vacation");
+    }
+    
+    public static double getSalary() {
+    	return 40000.00;
     }
 }
