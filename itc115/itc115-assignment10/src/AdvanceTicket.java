@@ -1,6 +1,7 @@
 
 public class AdvanceTicket extends Ticket{
 	private int days;
+	private double price;
 
 	public AdvanceTicket(int number, int days) {
 		super(number);
@@ -21,7 +22,7 @@ public class AdvanceTicket extends Ticket{
 	}
 
 	public String toString() {
-		return "Number: " + number + ", Price: $" + getPrice() + ", Purchased " + getDays() + " days before event";
+		return "Number: " + super.getNumber() + ", Price: $" + getPrice() + ", Purchased " + getDays() + " days before event";
 	}
 
 }
