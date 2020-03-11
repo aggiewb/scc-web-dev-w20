@@ -16,7 +16,7 @@ public class AdvanceTicket extends Ticket{
 	}
 
 	public String toString() {
-		return "Number: " + number + ", Price: " + price + ", Purchased " + days + "before event";
+		return "Number: " + number + ", Price: $" + price + ", Purchased " + days + "before event";
 	}
 
 }
