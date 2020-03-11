@@ -1,13 +1,14 @@
 
 public class AdvanceTicket extends Ticket{
 	private int days;
+
 	public AdvanceTicket(int number, int days) {
 		super(number);
 		this.days = days;
 	}
 
 	public double getPrice() {
-		if(days >= 10) {
+		if(this.days >= 10) {
 			price = 30;
 		} else {
 			price = 40;
@@ -16,7 +17,7 @@ public class AdvanceTicket extends Ticket{
 	}
 
 	public String toString() {
-		return "Number: " + number + ", Price: $" + price + ", Purchased " + days + "before event";
+		return "Number: " + number + ", Price: $" + getPrice() + ", Purchased " + days + " days before event";
 	}
 
 }
