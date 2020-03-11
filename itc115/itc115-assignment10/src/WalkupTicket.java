@@ -2,7 +2,7 @@
 public class WalkupTicket extends Ticket{
 	public WalkupTicket(int number){
 		super(number);
-		price = 50.0;
+		price = 50;
 	}
 	
 	public double getPrice() {
@@ -10,7 +10,7 @@ public class WalkupTicket extends Ticket{
 	}
 	
 	public String toString() {
-		return "Number: " + number + ", Price: " + price;
+		return "Number: " + number + ", Price: $" + price;
 	}
 
 }
