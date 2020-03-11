@@ -1,7 +1,7 @@
 
 public abstract class Ticket {
 	int number;
-	double price;
+	int price;
 	Ticket(int number){
 		this.number = number;
 	}
