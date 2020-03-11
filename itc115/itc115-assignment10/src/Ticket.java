@@ -1,12 +1,15 @@
 
 public abstract class Ticket {
-	int number;
-	double price;
+	private int number;
 	
-	Ticket(int number){
+	public Ticket(int number){
 		this.number = number;
 	}
 	
+	public int getNumber() {
+		return number;
+	}
+
 	public abstract double getPrice();
 	public abstract String toString();
 }
