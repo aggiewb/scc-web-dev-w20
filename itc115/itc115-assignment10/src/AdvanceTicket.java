@@ -7,7 +7,7 @@ public class AdvanceTicket extends Ticket{
 	}
 
 	public double getPrice() {
-		if(days > 10) {
+		if(days >= 10) {
 			price = 30;
 		} else {
 			price = 40;
