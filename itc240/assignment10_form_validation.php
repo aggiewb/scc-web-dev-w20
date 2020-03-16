@@ -9,7 +9,7 @@
     <body>
         <h1>Assignment 10: Regex Validation</h1>
         <p></p>
-        <form action="assignment10_form_validation.php" method="POST">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"" method="POST">
             <label for="first_name">First Name:</label>
             <input type="text" id="first_name" name="first_name">
             <label for="last_name">Last Name:</label>
