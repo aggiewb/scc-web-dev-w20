@@ -1,6 +1,9 @@
 <?php
-#Add validation to the form fields, such as required fields and correct formats for name (all characters), 
-#email and phone number with the correct format and permitted characters or number and special characters.
+#Add validation to the form fields, such as correct formats for name (all #characters), email and phone number with the correct format and permitted #characters or number and special characters.
+$first_name = "";
+$last_name = "";
+$email = "";
+$phone = "";
 ?>
 <html>
     <head>
@@ -9,7 +12,7 @@
     <body>
         <h1>Assignment 10: Regex Validation</h1>
         <p></p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"" method="POST">
+        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <label for="first_name">First Name:</label>
             <input type="text" id="first_name" name="first_name" required>
             <label for="last_name">Last Name:</label>
