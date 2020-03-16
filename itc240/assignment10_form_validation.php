@@ -19,20 +19,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = user_input($_POST["phone"]);
   }
 
-if(!preg_match("/^[a-zA-Z-]*$/",$first_name)){
+if(!preg_match("/^[a-zA-Z-]*$/",$first_name) && isset($_POST['first_name'])){
     $first_nameErr = "Only letters, hyphens and white space allowed";
 }
 
-if(!preg_match("/^[a-zA-Z-]*$/",$last_name)){
+if(!preg_match("/^[a-zA-Z-]*$/",$last_name) && isset($_POST['last_name'])){
     $last_nameErr = "Only letters, hyphens and white space allowed";
 }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if (!filter_var($email, FILTER_VALIDATE_EMAIL) && isset($_POST['email'])) {
     $emailErr = "Invalid email format";
 }
 
-if(!preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone)) {
-    $phoneErr = "Invaid phone number format. Please enter area code and six digit phone number with hyphens.";
+if(!preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone) && isset($_POST['phone'])) {
+    $phoneErr = "Invalid phone number format. Please enter area code and six digit phone number with hyphens.";
   }
 
 ?>
