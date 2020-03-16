@@ -59,20 +59,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </head>
     <body>
         <h1>Assignment 10: Regex Validation</h1>
-        <p></p>
+        <p>This form uses regular expressions and PHP to validate user input.</p>
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <label for="first_name">First Name:</label>
             <input type="text" id="first_name" name="first_name">
-            <p><?php echo $first_nameErr;?></p>
+            <p class="error"><?php echo $first_nameErr;?></p>
             <label for="last_name">Last Name:</label>
             <input type="text" id="last_name" name="last_name">
-            <p><?php echo $last_nameErr;?></p>            
+            <p class="error"><?php echo $last_nameErr;?></p>            
             <label for="email">Email:</label>
             <input type="email" id="email" name="email">
-            <p><?php echo $emailErr;?></p>
+            <p class="error"><?php echo $emailErr;?></p>
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone">
-            <p><?php echo $phoneErr;?></p>
+            <p class="error"><?php echo $phoneErr;?></p>
             <input type="submit" value="Submit">
         </form>
     </body>
