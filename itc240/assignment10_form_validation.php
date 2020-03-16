@@ -39,6 +39,9 @@ if(!preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone)) {
 <html>
     <head>
         <title>Regex Validation</title>
+        <link rel="stylesheet" type="text/css" href="basic_style.css">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <h1>Assignment 10: Regex Validation</h1>
