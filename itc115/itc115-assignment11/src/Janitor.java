@@ -1,4 +1,4 @@
-
+//a class to represent janitors
 public class Janitor extends Employee {
 	    public void showHours() {
 	        System.out.println("I work 80 hours per week.");
