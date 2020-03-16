@@ -6,8 +6,9 @@ public class HarvardLawyer extends Lawyer{
 	
 	public void applyForVacation() {
         for(int i = 0; i < 3; i++) {
-        	super.applyForVacation();
+        	System.out.print("pink");
         }
+        System.out.println();
     }
     
     public void showVacation() {
