@@ -11,30 +11,45 @@ function user_input($data) {
     return $data;
 }
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $first_name = user_input($_POST["first_name"]);
-    $last_name = user_input($_POST["last_name"]);
-    $email = user_input($_POST["email"]);
-    $phone = user_input($_POST["phone"]);
-  }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["first_name"])) {
+        $first_nameErr = "First name is required";
+    } else {
+        $first_name = user_input($_POST["first_name"]);
+        if (isset($_POST['email']) && !preg_match("/^[a-zA-Z-]*$/",$first_name)){
+            $first_nameErr = "Only letters, hyphens and white space allowed";
+        }
+    }
 
-if(!preg_match("/^[a-zA-Z-]*$/",$first_name) && isset($_POST['first_name'])){
-    $first_nameErr = "Only letters, hyphens and white space allowed";
+    if (empty($_POST["last_name"])) {
+        $last_nameErr = "Last name is required";
+    } else {
+        $last_name = user_input($_POST["last_name"]);
+        if(isset($_POST['email']) && !preg_match("/^[a-zA-Z-]*$/",$last_name)){
+            $last_nameErr = "Only letters, hyphens and white space allowed";
+        }
+    }
+
+    if (empty($_POST["email"])) {
+        $emailErr = "Email is required";
+    } else {
+        $email = user_input($_POST["email"]);
+        if (isset($_POST['email']) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Invalid email format";
+        }
+    }
+
+    if (empty($_POST["phone"])) {
+        $phoneErr = "Phone number is required";
+    } else {
+        $phone = user_input($_POST["phone"]);
+        if(isset($_POST['phone']) && !preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone)) {
+            $phoneErr = "Invalid phone number format. Please enter area code and six digit phone number with hyphens.";
+          }
+    }
 }
-
-if(!preg_match("/^[a-zA-Z-]*$/",$last_name) && isset($_POST['last_name'])){
-    $last_nameErr = "Only letters, hyphens and white space allowed";
-}
-
-if (!filter_var($email, FILTER_VALIDATE_EMAIL) && isset($_POST['email'])) {
-    $emailErr = "Invalid email format";
-}
-
-if(!preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone) && isset($_POST['phone'])) {
-    $phoneErr = "Invalid phone number format. Please enter area code and six digit phone number with hyphens.";
-  }
-
 ?>
+
 <html>
     <head>
         <title>Regex Validation</title>
@@ -47,16 +62,16 @@ if(!preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone) && isset($_POST['phone'
         <p></p>
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" required>
+            <input type="text" id="first_name" name="first_name">
             <p><?php echo $first_nameErr;?></p>
             <label for="last_name">Last Name:</label>
-            <input type="text" id="last_name" name="last_name" required>
+            <input type="text" id="last_name" name="last_name">
             <p><?php echo $last_nameErr;?></p>            
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email">
             <p><?php echo $emailErr;?></p>
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" name="phone">
             <p><?php echo $phoneErr;?></p>
             <input type="submit" value="Submit">
         </form>
