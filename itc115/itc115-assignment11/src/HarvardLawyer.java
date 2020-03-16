@@ -1,5 +1,5 @@
 
-public class HavardLawyer extends Lawyer{
+public class HarvardLawyer extends Lawyer{
 	public void showSalary() {
         System.out.println("My salary is $48,000.");
     }
