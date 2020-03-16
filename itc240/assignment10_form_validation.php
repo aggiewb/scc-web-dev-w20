@@ -1,5 +1,4 @@
 <?php
-#Add validation to the form fields, such as correct formats for name (all #characters), email and phone number with the correct format and permitted #characters or number and special characters.
 $first_name = "";
 $last_name = "";
 $email = "";
