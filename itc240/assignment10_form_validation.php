@@ -11,13 +11,13 @@
         <p></p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"" method="POST">
             <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name">
+            <input type="text" id="first_name" name="first_name" required>
             <label for="last_name">Last Name:</label>
-            <input type="text" id="last_name" name="last_name">
+            <input type="text" id="last_name" name="last_name" required>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone">
+            <input type="tel" id="phone" name="phone" required>
             <input type="submit" value="Submit">
         </form>
     </body>
