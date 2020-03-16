@@ -56,7 +56,7 @@ if(!preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone)) {
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <p><?php echo $emailErr;?></p>
-            <label for="phone">Phone Number</label>
+            <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required>
             <p><?php echo $phoneErr;?></p>
             <input type="submit" value="Submit">
