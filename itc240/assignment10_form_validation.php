@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $first_nameErr = "First name is required";
     } else {
         $first_name = user_input($_POST["first_name"]);
-        if (isset($_POST['email']) && !preg_match("/^[a-zA-Z-]*$/",$first_name)){
+        if (!preg_match("/^[a-zA-Z-]*$/",$first_name)){
             $first_nameErr = "Only letters, hyphens and white space allowed";
         }
     }
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $last_nameErr = "Last name is required";
     } else {
         $last_name = user_input($_POST["last_name"]);
-        if(isset($_POST['email']) && !preg_match("/^[a-zA-Z-]*$/",$last_name)){
+        if(!preg_match("/^[a-zA-Z-]*$/",$last_name)){
             $last_nameErr = "Only letters, hyphens and white space allowed";
         }
     }
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $emailErr = "Email is required";
     } else {
         $email = user_input($_POST["email"]);
-        if (isset($_POST['email']) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $emailErr = "Invalid email format";
         }
     }
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $phoneErr = "Phone number is required";
     } else {
         $phone = user_input($_POST["phone"]);
-        if(isset($_POST['phone']) && !preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone)) {
+        if(!preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone)) {
             $phoneErr = "Invalid phone number format. Please enter area code and six digit phone number with hyphens.";
           }
     }
