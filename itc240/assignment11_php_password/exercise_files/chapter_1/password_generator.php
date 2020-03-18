@@ -34,18 +34,20 @@ function generate_password($length){
     $symbols = '$*?!-';
 
     //extract configuration flags into variables
-    $use_lower = true;
-    $use_upper = true;
-    $use_num = true;
-    $use_symbols = true;
+    $use_lower = isset($_GET['lower']) ? $_GET['lower']: '0';
+    $use_upper = isset($_GET['upper']) ? $_GET['upper']: '0';
+    $use_numbers = isset($_GET['numbers']) ? $_GET['numbers']: '0';
+    $use_symbols = isset($_GET['symbols']) ? $_GET['symbols']: '0';
 
     $chars= '';
-    if($use_lower === true){ $chars .= $lower; }
-    if($use_upper === true){ $chars .= $upper; }
-    if($use_num === true){ $chars .= $num; }
-    if($use_symbols === true){ $chars .= $symbols; }
+    if($use_lower === '1'){ $chars .= $lower; }
+    if($use_upper === '1'){ $chars .= $upper; }
+    if($use_numbers === '1'){ $chars .= $numbers; }
+    if($use_symbols === '1'){ $chars .= $symbols; }
     return random_string($length, $chars);
 }
+
+$password = generate_password($_GET['length']);
 
 
 ?>
