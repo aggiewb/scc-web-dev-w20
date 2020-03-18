@@ -26,7 +26,7 @@ function random_string($length, $char_set){
 return $output;
 }
 
-function generate_password($length){
+function generate_password($options){
     //define character sets
     $lower= 'abcdefghijklmnopqrstuvwxyz';
     $upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -34,20 +34,33 @@ function generate_password($length){
     $symbols = '$*?!-';
 
     //extract configuration flags into variables
-    $use_lower = isset($_GET['lower']) ? $_GET['lower']: '0';
-    $use_upper = isset($_GET['upper']) ? $_GET['upper']: '0';
-    $use_numbers = isset($_GET['numbers']) ? $_GET['numbers']: '0';
-    $use_symbols = isset($_GET['symbols']) ? $_GET['symbols']: '0';
+    $use_lower = isset($options['lower']) ? $options['lower']: '0';
+    $use_upper = isset($options['upper']) ? $options['upper']: '0';
+    $use_numbers = isset($options['numbers']) ? $options['numbers']: '0';
+    $use_symbols = isset($options['symbols']) ? $options['symbols']: '0';
 
     $chars= '';
     if($use_lower === '1'){ $chars .= $lower; }
     if($use_upper === '1'){ $chars .= $upper; }
     if($use_numbers === '1'){ $chars .= $numbers; }
     if($use_symbols === '1'){ $chars .= $symbols; }
+
+    //default value of 8 is not functioning, though created verbatum the LinkedIn Learning video
+    $length = isset($options['length']) ? $options['length']: 8;
+    
     return random_string($length, $chars);
 }
 
-$password = generate_password($_GET['length']);
+$options = array(
+    'length' => $_GET['length'],
+    'lower' => $_GET['lower'],
+    'upper' => $_GET['upper'],
+    'numbers' => $_GET['numbers'],
+    'symbols' => $_GET['symbols']
+);
+
+
+$password = generate_password($options);
 
 
 ?>
@@ -77,6 +90,6 @@ $password = generate_password($_GET['length']);
         </form>
 
         <p>Generated Password: <?php echo $password; ?></p>
-
+    
     </body>
   </html>
