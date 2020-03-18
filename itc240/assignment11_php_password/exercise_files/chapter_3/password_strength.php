@@ -1,10 +1,23 @@
 <?php
+
+function password_strength($password){
+    $strength = 0;
+    $possible_points = 5;
+    $strength_percent = $strength / (float)$possible_points;
+    $rating = floor($strength_percent * 10);
+    return $rating;
+}
+
+$password = $_POST['rate'];
+$rating = password_strength($password);
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <title>Password Strength Meter</title>
+    <link rel="stylesheet" type="text/css" href="../../../basic_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <p>Your password rating is: <?php echo $rating; ?>
