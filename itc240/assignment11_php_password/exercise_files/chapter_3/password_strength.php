@@ -25,7 +25,8 @@ function count_symbols($string){
 
 function password_strength($password){
     $strength = 0;
-    $possible_points = 6;
+    $possible_points = 12;
+    $length = strlen($password);
 
     if(detect_any_uppercase($password)){
         $strength += 1;
@@ -38,7 +39,12 @@ function password_strength($password){
     $strength += min(count_numbers($password), 2);
     $strength += min(count_symbols($password), 2);
 
-    $strength_percent = $strength / (float)$possible_points;
+    if($length >= 8){
+        $strength += 2;
+        $strength += min(($length - 8) * 0.5, 4);
+    }
+
+    $strength_percent = $strength / (float) $possible_points;
     $rating = floor($strength_percent * 10);
     return $rating;
 }
