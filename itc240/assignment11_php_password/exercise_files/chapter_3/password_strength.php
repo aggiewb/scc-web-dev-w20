@@ -1,8 +1,27 @@
 <?php
 
+function detect_any_uppercase($string){
+    //true is lowercasing changes string
+    return strtolower($string) != $string;
+}
+
+function detect_any_lowercase($string){
+    //true is uppercasing changes string
+    return strtoupper($string) != $string;
+}
+
 function password_strength($password){
     $strength = 0;
-    $possible_points = 5;
+    $possible_points = 2;
+
+    if(detect_any_uppercase($password)){
+        $strength += 1;
+    }
+
+    if(detect_any_lowercase($password)){
+        $strength += 1;
+    }
+
     $strength_percent = $strength / (float)$possible_points;
     $rating = floor($strength_percent * 10);
     return $rating;
