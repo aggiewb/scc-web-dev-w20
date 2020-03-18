@@ -18,10 +18,19 @@ function random_char($string){
     return $string[$i];
 }
 
+function random_string($length, $char_set){
+    for($i=0; $i < $length; $i++){
+    $output .= random_char($char_set);
+    }
+return $output;
+}
+
+
 ?>
 <html>
 <p><pre><?php print_r($lower_array) ?><p></pre>
 <p><?php echo $chars ?><p>
 <p><?php echo $lower . $upper . $num . $symbols?><p>
 <p><?php echo random_char($chars); ?><p>
+<p><?php echo random_string(10, $chars); ?><p>
 </html>
