@@ -64,8 +64,6 @@ function generate_password($length){
         <p><?php echo random_string(10, $chars); ?><p>
         <p><?php echo generate_password(8); ?><p>
 
-        <p>Generated Password: <?php echo $password; ?></p>
-        
         <p>Generate a new password using the form options.</p>
         <form action="" method="get">
             Length: <input type="text" name="length" value="<?php if(isset($_GET['length'])) { echo $_GET['length']; } ?>" /><br />
@@ -75,6 +73,8 @@ function generate_password($length){
             <input type="checkbox" name="symbols" value="1" <?php if($_GET['symbols'] == 1) { echo 'checked'; } ?> /> Symbols<br />
             <input type="submit" value="Submit" />
         </form>
+
+        <p>Generated Password: <?php echo $password; ?></p>
 
     </body>
   </html>
