@@ -25,16 +25,40 @@ function pick_random_number($digits=1){
     return strval(mt_rand($min, $max));
 }
 
+function filter_words_by_length($array, $length){
+    $select_words = array();
+    foreach($array as $word){
+        if(strlen($word) == $length){
+            $select_words[] = $word;
+        }
+    }
+    return $select_words;
+}
+
 $basic_words = read_dictionary('friendly_words.txt');
 $brand_words = read_dictionary('brand_words.txt');
 
 $words = array_merge($brand_words, $basic_words);
-//could use array_unique() 
+//could use array_unique()
+
+$length = 12;
+$word_count = 2;
+$digit_count = 2;
+$symbol_count = 1;
+$avg_word_length = ($length - $digit_count - $symbol_count) / $word_count;
+
 $password = "";
-$password .= pick_random($words);
-$password .= pick_random_symbol($words);
-$password .= pick_random_number(3);
-$password .= pick_random($words);
+
+$next_word_length = mt_rand($avg_word_length - 1, $avg_word_length + 1);
+$select_words = filter_words_by_length($words, $next_word_length);
+$password .= pick_random($select_words);
+
+$password .= pick_random_symbol();
+$password .= pick_random_number($digit_count);
+
+$next_word_length = $length - strlen($password);
+$select_words = filter_words_by_length($words, $next_word_length);
+$password .= pick_random($select_words);
 
 ?>
 
@@ -47,7 +71,8 @@ $password .= pick_random($words);
     </head>
     <body>
         <p><?php
-        echo "Friendly password: " . $password . "<br />";  
+        echo "Friendly password: " . $password . "<br />"; 
+        echo "Length: " . strlen($password) . "<br />";
         ?></p>
     </body>
 </html>
