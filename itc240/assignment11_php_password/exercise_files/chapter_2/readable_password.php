@@ -1,8 +1,15 @@
 <?php
 
-$dictionary_file = 'dictionaries/friendly_words.txt';
-$lines = file($dictionary_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+function read_dictionary($filename=""){
+    $dictionary_file = "dictionaries/{$filename}";
+    return file($dictionary_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+}
 
+$basic_words = read_dictionary('friendly_words.txt');
+$brand_words = read_dictionary('brand_words.txt');
+
+$words = array_merge($brand_words, $basic_words);
+//could use array_unique() 
 ?>
 
 <html>
@@ -13,12 +20,15 @@ $lines = file($dictionary_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet"> </head>
     <body>
         <p><?php 
-        echo $lines[0]. "<br />";
-        echo $lines[1]. "<br />"; 
-        echo $lines[2]. "<br />"; 
-        echo $lines[3]. "<br />"; 
-        echo $lines[4]. "<br />"; 
-        echo $lines[5]. "<br />";  
+        echo $words[0]. "<br />";
+        echo $words[1]. "<br />"; 
+        echo $words[2]. "<br />"; 
+        echo $words[3]. "<br />"; 
+        echo $words[4]. "<br />"; 
+        echo $words[5]. "<br />";
+        echo $words[6]. "<br />";  
+        echo $words[7]. "<br />";  
+        echo $words[8]. "<br />";    
         ?></p>
     </body>
 </html>
