@@ -61,7 +61,7 @@ $select_words = filter_words_by_length($words, $next_word_length);
 $password .= pick_random($select_words);
 
 ?>
-
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">

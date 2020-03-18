@@ -64,6 +64,7 @@ $password = generate_password($options);
 
 
 ?>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
