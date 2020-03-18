@@ -1,9 +1,10 @@
 <?php
-$lower= 'abcdefghijklmnopqrstuvwxyz';
+/* $lower= 'abcdefghijklmnopqrstuvwxyz';
 $upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 $numbers = '0123456789';
 $symbols = '$*?!-';
 $chars= $lower . $upper .$numbers . $symbols;
+variables moved to generate_password function */
 
 //can also use PHP range()
 $upper_array= range('A', 'Z');
@@ -25,6 +26,27 @@ function random_string($length, $char_set){
 return $output;
 }
 
+function generate_password($length){
+    //define character sets
+    $lower= 'abcdefghijklmnopqrstuvwxyz';
+    $upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $numbers = '0123456789';
+    $symbols = '$*?!-';
+
+    //extract configuration flags into variables
+    $use_lower = true;
+    $use_upper = true;
+    $use_num = true;
+    $use_symbols = true;
+
+    $chars= '';
+    if($use_lower === true){ $chars .= $lower; }
+    if($use_upper === true){ $chars .= $upper; }
+    if($use_num === true){ $chars .= $num; }
+    if($use_symbols === true){ $chars .= $symbols; }
+    return random_string($length, $chars);
+}
+
 
 ?>
 <html>
@@ -33,4 +55,5 @@ return $output;
 <p><?php echo $lower . $upper . $num . $symbols?><p>
 <p><?php echo random_char($chars); ?><p>
 <p><?php echo random_string(10, $chars); ?><p>
+<p><?php echo generate_password(8); ?><p>
 </html>
