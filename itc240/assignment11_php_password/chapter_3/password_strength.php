@@ -57,7 +57,7 @@ $rating = password_strength($password);
   <head>
     <meta charset="UTF-8">
     <title>Password Strength Meter</title>
-    <link rel="stylesheet" type="text/css" href="../../../basic_style.css">
+    <link rel="stylesheet" type="text/css" href="../../basic_style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet">
     <style>
     #meter div{
@@ -91,6 +91,13 @@ $rating = password_strength($password);
     </style> 
   </head>
   <body>
+    <nav>
+        <ul>
+            <li><a href="../chapter_1/password_generator.php">Chapter 1: Password Generator</a></li>
+            <li><a href="../chapter_2/readable_password.php">Chapter 2: Readable Password Generator</a></li>
+            <li><a href="#">Chapter 3: Password Strength Meter</a></li>
+        </ul>
+    </nav>
     <p>Your password rating is: <?php echo $rating; ?>
 
     <div id="meter">

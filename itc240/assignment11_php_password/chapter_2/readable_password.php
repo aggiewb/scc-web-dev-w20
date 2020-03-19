@@ -66,10 +66,17 @@ $password .= pick_random($select_words);
     <head>
         <meta charset="UTF-8">
         <title>Password Generator</title>
-        <link rel="stylesheet" type="text/css" href="../../../basic_style.css">
+        <link rel="stylesheet" type="text/css" href="../../basic_style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet"> 
     </head>
     <body>
+        <nav>
+            <ul>
+                <li><a href="../chapter_1/password_generator.php">Chapter 1: Password Generator</a></li>
+                <li><a href="#">Chapter 2: Readable Password Generator</a></li>
+                <li><a href="../chapter_3/password_strength.php">Chapter 3: Password Strength Meter</a></li>
+            </ul>
+        </nav>
         <p><?php
         echo "Friendly password: " . $password . "<br />"; 
         echo "Length: " . strlen($password) . "<br />";
