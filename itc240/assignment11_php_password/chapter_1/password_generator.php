@@ -69,10 +69,17 @@ $password = generate_password($options);
     <head>
         <meta charset="UTF-8">
         <title>Password Generator</title>
-        <link rel="stylesheet" type="text/css" href="../../../basic_style.css">
+        <link rel="stylesheet" type="text/css" href="../../basic_style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet"> 
     </head>
     <body>
+        <nav>
+            <ul>
+                <li><a href="#">Chapter 1: Password Generator</a></li>
+                <li><a href="../chapter_2/readable_password.php">Chapter 2: Readable Password Generator</a></li>
+                <li><a href="../chapter_3/password_strength.php">Chapter 3: Password Strength Meter</a></li>
+            </ul>
+        </nav>
         <p><pre><?php print_r($lower_array) ?><p></pre>
         <p><?php echo $chars ?><p>
         <p><?php echo $lower . $upper . $num . $symbols?><p>
