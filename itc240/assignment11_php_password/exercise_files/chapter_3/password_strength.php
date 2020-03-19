@@ -58,10 +58,55 @@ $rating = password_strength($password);
     <meta charset="UTF-8">
     <title>Password Strength Meter</title>
     <link rel="stylesheet" type="text/css" href="../../../basic_style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap" rel="stylesheet">
+    <style>
+    #meter div{
+        height: 20px;
+        width: 20px;
+        margin: 0 1px 0 0;
+        padding: 0;
+        float: left;
+        background-color: #DDDDDD;  
+    }
+
+    #meter div.rating-1, #meter div.rating-2{
+        background-color: green;
+    }
+
+    #meter div.rating-3, #meter div.rating-4{
+        background-color: blue;
+    }
+
+    #meter div.rating-5, #meter div.rating-6{
+        background-color: yellow;
+    }
+
+    #meter div.rating-7, #meter div.rating-8{
+        background-color: orange;
+    }
+
+    #meter div.rating-9, #meter div.rating-10{
+        background-color: red;
+    }
+    </style> 
   </head>
   <body>
     <p>Your password rating is: <?php echo $rating; ?>
+
+    <div id="meter">
+        <?php
+        for($i = 0; $i < 10; $i++){
+            echo "<div";
+            if($rating > $i){
+                echo " class=\"rating-{$rating}\"";
+            }
+            echo "></div>";
+        } 
+        ?>
+    </div>
+
+    <br style="clear: both;" />
+
     <p>Rate the strength of your password:</p>
     <form action="" method="post">
       Password: <input type="text" name="rate" value="" /><br />
