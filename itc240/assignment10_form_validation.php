@@ -75,5 +75,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p class="error"><?php echo $phoneErr;?></p>
             <input type="submit" value="Submit">
         </form>
+        <a href="https://github.com/aggiewb/scc-web-dev-w20/blob/master/itc240/assignment10_form_validation.php" target="_blank">GitHub PHP code for form validation</a>
     </body>
 </html> 
