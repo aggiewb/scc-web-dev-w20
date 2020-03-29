@@ -77,5 +77,6 @@ class Calculator {
             echo "<p>" . $calc->num1 . " " . $calc->operator. " " . $calc->num2 . " = " . $calc->result . "</p>";
         } 
         ?>
+         <a href="https://github.com/aggiewb/scc-web-dev-w20/blob/master/itc240/assignment8_classes.php" target="_blank">GitHub PHP code for calculator</a>
     </body>
 </html>
